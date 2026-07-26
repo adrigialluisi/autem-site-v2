@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe v3 · Autem Investimentos</title>
+
+<!--
+  ══════════════════════════════════════════════════════════════
+  TIPOGRAFIA — PENDENTE CONFIRMAÇÃO DO BRANDBOOK APENT
+  ──────────────────────────────────────────────────────────────
+  Substituir pelo arquivo de fonte especificado no brandbook_Apent.pdf
+  Placeholder atual: "Hanken Grotesk" (Google Fonts)
+  Na versão Vite final: importar via @font-face com os arquivos locais
+  ══════════════════════════════════════════════════════════════
+-->
+
+
+<link rel="stylesheet" href="style.css">  <meta name="view-transition" content="same-origin">
+</head>
+<body>
+<!-- ════════════ NAV ════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo" onclick="window.location.href='index.html'" title="Home">
+      <!-- Logo branca para fundo escuro -->
+      <img src="IMGs/Autem-logo_branca.png" alt="Autem Investimentos">
+      <span class="nav-logo-fallback">Autem</span>
+    </div>
+    
+    <button class="hamburger" id="mobile-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-drawer" id="nav-drawer">
+<ul class="nav-links">
+      <li><a href="index.html" id="nav-home" class="active">Home</a></li>
+      <li><a href="quem-somos.html" id="nav-quem-somos">Quem Somos</a></li>
+      <li><a href="time.html" id="nav-time">Time</a></li>
+      <li><a href="blog.html" id="nav-blog">Blog</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-link-plain" onclick="openFaleConosco(event)">Fale conosco</button>
+      <button class="nav-btn-outline" onclick="openJaTenhoConta()">Já tenho conta</button>
+      <button class="btn-primary">Abrir conta</button>
+    </div>
+    </div>
+  </div>
+</nav>
+
+<div id="page-home" class="page-offset">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <!-- Parceiro BTG badge removed -->
+        <h1>Assessoria acessível,<br class="hero-br-mobile"> <em>sonhos possíveis.</em></h1>
+        <div class="hero-text-group">
+          <p class="hero-sub">Uma assessoria que caminha ao seu lado em cada etapa da sua vida, para você construir patrimônio com mais confiança.</p>
+        </div>
+        <div class="hero-cta-row">
+          <button class="btn-hero">Abra sua conta</button>
+        </div>
+      </div>
+
+      <div class="hero-numbers-card">
+        <div class="numeros-grid">
+          <div class="numero-item">
+            <div class="numero-val"><span class="num-anim" data-val="2" data-prefix="R$" data-suffix="B+">R$0B+</span></div>
+            <div class="numero-label">Ativos sob assessoria</div>
+          </div>
+          <div class="numero-item">
+            <div class="numero-val"><span class="num-anim" data-val="1200" data-format="dot" data-suffix="+">0+</span></div>
+            <div class="numero-label">Clientes ativos</div>
+          </div>
+          <div class="numero-item">
+            <div class="numero-val"><span class="num-anim" data-val="30" data-suffix="+">0+</span></div>
+            <div class="numero-label">Especialistas no time</div>
+          </div>
+          <div class="numero-item">
+            <div class="numero-val"><span class="num-anim" data-val="5" data-suffix=" anos">0 anos</span></div>
+            <div class="numero-label">De mercado e crescimento</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" onclick="document.querySelector('.premios-bar').scrollIntoView({behavior: 'smooth'})">
+        <span>ROLE PARA BAIXO</span>
+        <svg class="scroll-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE PRÊMIOS -->
+  <section class="premios-bar">
+    <div class="container">
+      <div class="numeros-premio carousel-track" id="carousel-premios">
+        <div class="premio-badge carousel-item">
+          <div class="premio-badge-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <div class="premio-badge-text">Top Escritório BTG</div>
+            <div class="premio-badge-sub">Prêmio 2024</div>
+          </div>
+        </div>
+        <div class="premio-badge carousel-item">
+          <div class="premio-badge-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div>
+            <div class="premio-badge-text">Certificação CVM</div>
+            <div class="premio-badge-sub">Resolução 178</div>
+          </div>
+        </div>
+        <div class="premio-badge carousel-item">
+          <div class="premio-badge-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="premio-badge-text">Parceiro BTG Pactual</div>
+            <div class="premio-badge-sub">Maior banco de inv. da AL</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-arrow" id="carousel-premios-prev" aria-label="Anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="carousel-dots" id="carousel-premios-dots"></div>
+        <button class="carousel-arrow" id="carousel-premios-next" aria-label="Próximo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILARES -->
+  <section class="pilares">
+    <div class="container">
+      <span class="section-eyebrow">Por que Autem</span>
+      <div class="section-title">Seus investimentos merecem mais</div>
+      <p class="section-sub">Direção de quem entende o seu momento com a estrutura do maior banco de investimentos da América Latina.</p>
+      <div class="pilares-grid carousel-track" id="carousel-pilares">
+
+        <div class="pilar-card carousel-item">
+          <svg class="pilar-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.75">
+            <path d="M24 4l5 10 11 1.6-8 7.8 1.9 11L24 29l-9.9 5.4L16 23.4 8 15.6 19 14z"/>
+          </svg>
+          <div class="pilar-title">Assessoria especializada</div>
+          <p class="pilar-desc">Uma equipe que escuta antes de indicar, dedicada a entender seus objetivos e apontar as melhores oportunidades para o seu perfil.</p>
+        </div>
+
+        <div class="pilar-card carousel-item">
+          <svg class="pilar-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.75">
+            <path d="M8 24h8l5-12 6 24 5-16 4 4h4"/>
+          </svg>
+          <div class="pilar-title">Acesso ampliado</div>
+          <p class="pilar-desc">Fundos fechados, operações estruturadas e ativos exclusivos, através da estrutura do BTG Pactual.</p>
+        </div>
+
+        <div class="pilar-card carousel-item">
+          <svg class="pilar-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.75">
+            <circle cx="24" cy="24" r="20"/><path d="M24 14v10l6 4"/>
+          </svg>
+          <div class="pilar-title">Plataforma líder</div>
+          <p class="pilar-desc">Toda a solidez e tecnologia do maior banco de investimentos da América Latina, à disposição da sua carteira.</p>
+        </div>
+
+        <div class="pilar-card carousel-item">
+          <svg class="pilar-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="0.75">
+            <rect x="10" y="6" width="28" height="36" rx="4"/><rect x="16" y="14" width="16" height="2" rx="1"/><rect x="16" y="20" width="10" height="2" rx="1"/><circle cx="24" cy="32" r="4"/>
+          </svg>
+          <div class="pilar-title">Na palma da mão</div>
+          <p class="pilar-desc">Gerencie toda a sua carteira pelo app BTG a qualquer hora com visibilidade total sobre seus investimentos.</p>
+        </div>
+
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-arrow" id="carousel-pilares-prev" aria-label="Anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="carousel-dots" id="carousel-pilares-dots"></div>
+        <button class="carousel-arrow" id="carousel-pilares-next" aria-label="Próximo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="text-center" style="margin-top: 56px;">
+        <button class="btn-primary">Abra sua conta</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PORTFÓLIO — tabs verticais -->
+  <section class="portfolio">
+    <div class="container">
+      <span class="section-eyebrow">Portfólio completo</span>
+      <div class="section-title">Produtos para cada objetivo</div>
+      <p class="section-sub">Um portfólio completo para caminhar com você em cada etapa, do conservador ao inovador, com acesso à plataforma BTG Pactual.</p>
+
+      <div class="portfolio-glass-layout" id="portfolio-layout">
+
+        <!-- Mobile Pills -->
+        <div class="portfolio-pills mobile-only">
+          <button class="pill-btn active" onclick="switchPortfolioPane('pane-rf', this)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Renda Fixa
+          </button>
+          <button class="pill-btn" onclick="switchPortfolioPane('pane-rv', this)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            Renda Variável
+          </button>
+          <button class="pill-btn" onclick="switchPortfolioPane('pane-fiis', this)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            FIIs e Alternativos
+          </button>
+          <button class="pill-btn" onclick="switchPortfolioPane('pane-fi', this)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Fundos de Investimento
+          </button>
+          <button class="pill-btn" onclick="switchPortfolioPane('pane-prev', this)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Previdência
+          </button>
+          <button class="pill-btn" onclick="switchPortfolioPane('pane-cripto', this)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Criptomoedas
+          </button>
+        </div>
+
+        <!-- Left Menu (Desktop) -->
+        <div class="portfolio-menu desktop-only">
+          <button class="menu-item active" onclick="switchPortfolioPane('pane-rf', this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Renda Fixa
+          </button>
+          <button class="menu-item" onclick="switchPortfolioPane('pane-rv', this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            Renda Variável
+          </button>
+          <button class="menu-item" onclick="switchPortfolioPane('pane-fiis', this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            FIIs e Alternativos
+          </button>
+          <button class="menu-item" onclick="switchPortfolioPane('pane-fi', this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Fundos de Investimento
+          </button>
+          <button class="menu-item" onclick="switchPortfolioPane('pane-prev', this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Previdência Privada
+          </button>
+          <button class="menu-item" onclick="switchPortfolioPane('pane-cripto', this)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            Criptomoedas
+          </button>
+        </div><!-- /portfolio-menu -->
+
+        <!-- Right Content Panes -->
+        <div class="portfolio-content" id="portfolio-content">
+
+          <!-- Renda Fixa -->
+          <div class="portfolio-pane active" id="pane-rf">
+            <div class="sub-products-list carousel-track" id="carousel-rf">
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Títulos Públicos <span class="tag">Tesouro Direto</span><span class="tag">FGC</span></div>
+                <p class="sub-product-desc">Segurança do governo federal. Ideal para reserva de emergência e objetivos de médio a longo prazo com rentabilidade previsível.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Emissores Bancários <span class="tag">CDB</span><span class="tag">LCI</span><span class="tag">LCA</span></div>
+                <p class="sub-product-desc">Rentabilidade competitiva com proteção do FGC de até R$250 mil por CPF por instituição. Isenção de IR em LCI e LCA.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Crédito Privado <span class="tag">CRI</span><span class="tag">CRA</span><span class="tag">Debêntures</span><span class="tag">FIDC</span></div>
+                <p class="sub-product-desc">Rentabilidade acima da renda fixa tradicional com diversificação de emissores. Muitos com isenção de IR para pessoa física.</p>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-arrow" id="carousel-rf-prev" aria-label="Anterior">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div class="carousel-dots" id="carousel-rf-dots"></div>
+              <button class="carousel-arrow" id="carousel-rf-next" aria-label="Próximo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Renda Variável -->
+          <div class="portfolio-pane" id="pane-rv">
+            <div class="sub-products-list carousel-track" id="carousel-rv">
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Empresas Listadas <span class="tag">Ações</span><span class="tag">ETF</span><span class="tag">BDR</span></div>
+                <p class="sub-product-desc">Ações negociadas na B3 com análises especializadas da Autem. Potencial de valorização e recebimento de dividendos.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Operações Estruturadas <span class="tag">Derivativos</span><span class="tag">Opções</span></div>
+                <p class="sub-product-desc">Estratégias avançadas com derivativos para hedging, proteção de carteira e operações alavancadas no mercado secundário.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Ofertas Públicas <span class="tag">IPO</span><span class="tag">Follow-on</span></div>
+                <p class="sub-product-desc">Participação em ofertas coordenadas pelo BTG Pactual. Acesso privilegiado a IPOs e follow-ons como cliente Autem.</p>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-arrow" id="carousel-rv-prev" aria-label="Anterior">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div class="carousel-dots" id="carousel-rv-dots"></div>
+              <button class="carousel-arrow" id="carousel-rv-next" aria-label="Próximo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- FIIs e Alternativos -->
+          <div class="portfolio-pane" id="pane-fiis">
+            <div class="sub-products-list carousel-track" id="carousel-fiis">
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">FII — Fundos Imobiliários <span class="tag">FII</span><span class="tag">Lajes</span><span class="tag">Logística</span></div>
+                <p class="sub-product-desc">Exposição ao mercado imobiliário com liquidez de bolsa. Distribuição mensal de rendimentos, isentos de IR para pessoa física.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">FIAGRO e FI-INFRA <span class="tag">FIAGRO</span><span class="tag">FI-INFRA</span><span class="tag">FIP-IE</span></div>
+                <p class="sub-product-desc">Fundos focados em agronegócio e infraestrutura. Acesso a setores estratégicos da economia real com benefício fiscal.</p>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-arrow" id="carousel-fiis-prev" aria-label="Anterior">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div class="carousel-dots" id="carousel-fiis-dots"></div>
+              <button class="carousel-arrow" id="carousel-fiis-next" aria-label="Próximo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Fundos de Investimento -->
+          <div class="portfolio-pane" id="pane-fi">
+            <div class="sub-products-list sub-products-grid carousel-track" id="carousel-fi">
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Fundos Abertos <span class="tag">Multimercado</span><span class="tag">RF</span><span class="tag">Ações</span></div>
+                <p class="sub-product-desc">Liquidez diária ou programada. Gestão ativa com acesso a estratégias diversificadas e gestores de renome.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Fundos Fechados <span class="tag">Exclusivo</span><span class="tag">Qualificado</span></div>
+                <p class="sub-product-desc">Estratégias de longo prazo com janelas exclusivas. Acesso a fundos restritos a investidores qualificados via BTG.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Fundos Listados <span class="tag">FII</span><span class="tag">FIAGRO</span><span class="tag">FI-INFRA</span><span class="tag">FIP-IE</span></div>
+                <p class="sub-product-desc">Negociados em bolsa com distribuição de proventos mensais. Exposição a imóveis, agronegócio e infraestrutura.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Fundos Cetipados <span class="tag">FII</span><span class="tag">FIAGRO</span><span class="tag">FI-INFRA</span><span class="tag">FIP-IE</span></div>
+                <p class="sub-product-desc">Cotas registradas na CETIP — mesma exposição dos fundos listados com estrutura de distribuição diferenciada.</p>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-arrow" id="carousel-fi-prev" aria-label="Anterior">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div class="carousel-dots" id="carousel-fi-dots"></div>
+              <button class="carousel-arrow" id="carousel-fi-next" aria-label="Próximo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Previdência Privada -->
+          <div class="portfolio-pane" id="pane-prev">
+            <div class="sub-products-list carousel-track" id="carousel-prev">
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">PGBL <span class="tag">Dedução IR</span><span class="tag">Longo prazo</span></div>
+                <p class="sub-product-desc">Dedução de até 12% da renda bruta anual no IR. Indicado para quem faz declaração completa. Tributação sobre valor total no resgate.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">VGBL <span class="tag">Sucessório</span><span class="tag">Flexível</span></div>
+                <p class="sub-product-desc">Tributação somente sobre os rendimentos. Ideal para declaração simplificada e como ferramenta de planejamento sucessório.</p>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-arrow" id="carousel-prev-prev" aria-label="Anterior">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div class="carousel-dots" id="carousel-prev-dots"></div>
+              <button class="carousel-arrow" id="carousel-prev-next" aria-label="Próximo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Criptomoedas -->
+          <div class="portfolio-pane" id="pane-cripto">
+            <div class="sub-products-list carousel-track" id="carousel-cripto">
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Bitcoin, Ethereum e outros <span class="tag">Bitcoin</span><span class="tag">Ethereum</span><span class="tag">Regulado</span></div>
+                <p class="sub-product-desc">Exposição a ativos digitais com custódia BTG. Acesso regulado e seguro ao mercado cripto, integrado à carteira de investimentos.</p>
+              </div>
+              <div class="sub-product-row carousel-item">
+                <div class="sub-product-title">Mercados Preditivos <span class="tag">BTG Trends</span><span class="tag">Eventos</span></div>
+                <p class="sub-product-desc">Plataforma BTG Trends — produtos baseados na probabilidade de ocorrência de eventos futuros. Novo paradigma de alocação.</p>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <button class="carousel-arrow" id="carousel-cripto-prev" aria-label="Anterior">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div class="carousel-dots" id="carousel-cripto-dots"></div>
+              <button class="carousel-arrow" id="carousel-cripto-next" aria-label="Próximo">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </div><!-- /portfolio-content -->
+
+      </div><!-- /portfolio-glass-layout -->
+    </div>
+  </section>
+
+
+  <!-- BANKING -->
+  <section class="banking-section">
+    <div class="banking-card-deco" aria-hidden="true">
+      <img src="IMGs/CardPrata.png" alt="">
+    </div>
+    <div class="container">
+      <span class="section-eyebrow">Banking BTG</span>
+      <div class="section-title">Banco completo na palma da mão</div>
+      <p class="section-sub">Com a Autem, você tem conta digital, cartões e crédito do ecossistema BTG: tudo integrado à sua carteira de investimentos.</p>
+
+      <!-- Abas de navegação -->
+      <div class="banking-tabs-nav">
+        <button class="banking-tab-btn active" onclick="switchBankingTab('pf', this)">Para você</button>
+        <button class="banking-tab-btn" onclick="switchBankingTab('pj', this)">Para sua empresa</button>
+      </div>
+
+      <!-- Aba: Pessoa Física -->
+      <div class="banking-tab-panel active" id="banking-pf">
+        <div class="banking-products-grid carousel-track" id="carousel-banking-pf">
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+            <div class="banking-prod-cat">Conta</div>
+            <div class="banking-prod-title">Conta Digital BTG</div>
+            <p class="banking-prod-desc">TED e PIX sem custo. Saldo aplicado automaticamente no overnight — seu dinheiro parado rende.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <div class="banking-prod-cat">Cartão</div>
+            <div class="banking-prod-title">Cartão de Crédito</div>
+            <p class="banking-prod-desc">Programa de milhas com principalidade BTG. Anuidade zero e controle pelo app integrado à carteira.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="banking-prod-cat">Crédito</div>
+            <div class="banking-prod-title">Crédito Pessoal</div>
+            <p class="banking-prod-desc">Empréstimo com garantia de investimentos. Taxas menores, sem precisar resgatar sua carteira.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="banking-prod-cat">Crédito</div>
+            <div class="banking-prod-title">Home Equity</div>
+            <p class="banking-prod-desc">Crédito com garantia de imóvel. Acesso a grandes valores com parcelas compatíveis e taxas competitivas.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="banking-prod-cat">Pagamentos</div>
+            <div class="banking-prod-title">Débito e Pagamentos</div>
+            <p class="banking-prod-desc">Débito automático, boletos e pagamentos integrados. Tudo em um único app, sem trocar de banco.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div class="banking-prod-cat">Câmbio</div>
+            <div class="banking-prod-title">Câmbio BTG</div>
+            <p class="banking-prod-desc">Remessas internacionais e cartão multimoeda. Taxas competitivas com câmbio BTG direto no app.</p>
+          </div>
+
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-arrow" id="carousel-banking-pf-prev" aria-label="Anterior">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="carousel-dots" id="carousel-banking-pf-dots"></div>
+          <button class="carousel-arrow" id="carousel-banking-pf-next" aria-label="Próximo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Aba: Pessoa Jurídica -->
+      <div class="banking-tab-panel" id="banking-pj">
+        <div class="banking-products-grid carousel-track" id="carousel-banking-pj">
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+            </div>
+            <div class="banking-prod-cat">Conta</div>
+            <div class="banking-prod-title">Conta PJ BTG</div>
+            <p class="banking-prod-desc">Conta corrente empresarial com TED, PIX e boletos sem custo. Saldo aplicado automaticamente no overnight.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <div class="banking-prod-cat">Cartão</div>
+            <div class="banking-prod-title">Cartão Empresarial</div>
+            <p class="banking-prod-desc">Cartão corporativo com controle de gastos por centro de custo e integração com o sistema financeiro da empresa.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="banking-prod-cat">Crédito</div>
+            <div class="banking-prod-title">Capital de Giro</div>
+            <p class="banking-prod-desc">Linhas de crédito para necessidades operacionais. Aprovação ágil e taxas competitivas para empresas em crescimento.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="banking-prod-cat">Crédito</div>
+            <div class="banking-prod-title">Antecipação de Recebíveis</div>
+            <p class="banking-prod-desc">Antecipe duplicatas, notas fiscais e recebíveis de cartão. Melhore o fluxo de caixa sem comprometer o limite bancário.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="banking-prod-cat">Gestão</div>
+            <div class="banking-prod-title">Conta Escrow</div>
+            <p class="banking-prod-desc">Estrutura de garantia para contratos, M&As e projetos. Controle total dos fluxos com segurança jurídica.</p>
+          </div>
+
+          <div class="banking-prod-card carousel-item">
+            <div class="banking-prod-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <div class="banking-prod-cat">Câmbio</div>
+            <div class="banking-prod-title">Câmbio Corporativo</div>
+            <p class="banking-prod-desc">Remessas, importações e exportações com câmbio BTG. Hedge cambial e consultoria especializada para empresas.</p>
+          </div>
+
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-arrow" id="carousel-banking-pj-prev" aria-label="Anterior">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="carousel-dots" id="carousel-banking-pj-dots"></div>
+          <button class="carousel-arrow" id="carousel-banking-pj-next" aria-label="Próximo">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: 56px;">
+        <button class="btn-primary">Abra sua conta</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="como-funciona">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-eyebrow">Simples assim</span>
+        <div class="section-title">Como funciona</div>
+        <p class="section-sub">Sem burocracia, sem jargão. Abra sua conta e tenha na palma da mão os melhores produtos de investimento do mercado.</p>
+      </div>
+      <div class="steps-visual carousel-track" id="carousel-como-funciona">
+
+        <div class="step-visual carousel-item">
+          <div class="step-visual-header">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--c-green)" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+            </svg>
+            <div class="step-visual-num">01</div>
+          </div>
+          <div class="step-visual-title">Abra sua conta</div>
+          <p class="step-visual-desc">Processo 100% digital pelo app BTG. Menos de 10 minutos e você já tem acesso ao ecossistema completo.</p>
+        </div>
+
+        <div class="step-visual carousel-item">
+          <div class="step-visual-header">
+            <svg width="44" height="34" viewBox="0 0 32 24" fill="none" stroke="var(--c-green)" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="18" height="13" rx="2" ry="2"/>
+              <line x1="7" y1="20" x2="15" y2="20"/>
+              <line x1="11" y1="16" x2="11" y2="20"/>
+              <rect x="16" y="7" width="10" height="14" rx="2" ry="2" fill="var(--c-blue)" stroke="var(--c-green)"/>
+              <line x1="21" y1="18" x2="21.01" y2="18"/>
+            </svg>
+            <div class="step-visual-num">02</div>
+          </div>
+          <div class="step-visual-title">Explore os produtos</div>
+          <p class="step-visual-desc">Toda a carteira BTG — do conservador ao sofisticado — com suporte dedicado da equipe Autem.</p>
+        </div>
+
+        <div class="step-visual carousel-item">
+          <div class="step-visual-header">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="var(--c-green)" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+            <div class="step-visual-num">03</div>
+          </div>
+          <div class="step-visual-title">Acompanhe e cresça</div>
+          <p class="step-visual-desc">Monitore sua carteira em tempo real, receba análises e evolua sua estratégia com nossa equipe.</p>
+        </div>
+
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-arrow" id="carousel-como-funciona-prev" aria-label="Anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="carousel-dots" id="carousel-como-funciona-dots"></div>
+        <button class="carousel-arrow" id="carousel-como-funciona-next" aria-label="Próximo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="text-center" style="margin-top: 56px;">
+        <button class="btn-primary">Abra sua conta</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- AUTEM NA MÍDIA -->
+  <section class="midia-section">
+    <div class="container">
+      <div class="midia-inner">
+        <!-- Lado esquerdo: Carrossel de notícias -->
+        <div class="midia-carousel-wrap">
+          <div class="midia-cards carousel-track" id="carousel-midia">
+            <div class="midia-card carousel-item">
+              <div class="midia-card-title">Autem se consolida como referência em assessoria de investimentos no BTG</div>
+              <p class="midia-card-desc">Destaque na expansão do mercado de assessoria patrimonial, a Autem reforça sua principalidade em soluções financeiras integradas e atendimento de alta renda dentro do ecossistema BTG Pactual.</p>
+              <div class="midia-card-footer">
+                <span class="midia-card-meta">Infomoney &bull; Jun 2024</span>
+                <a href="https://www.infomoney.com.br" target="_blank" class="midia-card-link">Ler matéria &rarr;</a>
+              </div>
+            </div>
+
+            <div class="midia-card carousel-item">
+              <div class="midia-card-title">Escritórios independentes ganham espaço no segmento de alta renda</div>
+              <p class="midia-card-desc">Em matéria especial sobre o crescimento de escritórios independentes, a Autem é citada como modelo de curadoria isenta e governança na gestão de patrimônio de famílias e empresas.</p>
+              <div class="midia-card-footer">
+                <span class="midia-card-meta">Valor Econômico &bull; Mai 2024</span>
+                <a href="https://valor.globo.com" target="_blank" class="midia-card-link">Ler matéria &rarr;</a>
+              </div>
+            </div>
+
+            <div class="midia-card carousel-item">
+              <div class="midia-card-title">Como a assessoria personalizada está transformando a relação dos brasileiros com investimentos</div>
+              <p class="midia-card-desc">Reportagem mostra como o modelo de atendimento próximo e exclusivo da Autem, alinhado à tecnologia do BTG, tem redefinido o planejamento financeiro e de investimentos no país.</p>
+              <div class="midia-card-footer">
+                <span class="midia-card-meta">Exame Invest &bull; Abr 2024</span>
+                <a href="https://exame.com" target="_blank" class="midia-card-link">Ler matéria &rarr;</a>
+              </div>
+            </div>
+
+            <div class="midia-card carousel-item">
+              <div class="midia-card-title">Autem registra crescimento de 40% em AuC no primeiro semestre</div>
+              <p class="midia-card-desc">Com expansão expressiva de ativos sob custódia, o escritório destaca sua estratégia focada em alocação eficiente, renda fixa bancária, crédito privado e gestão patrimonial de longo prazo.</p>
+              <div class="midia-card-footer">
+                <span class="midia-card-meta">Broadcast &bull; Mar 2024</span>
+                <a href="https://www.estadao.com.br" target="_blank" class="midia-card-link">Ler matéria &rarr;</a>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-nav" id="carousel-midia-nav">
+            <button class="carousel-arrow" id="carousel-midia-prev" aria-label="Anterior">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <div class="carousel-dots" id="carousel-midia-dots"></div>
+            <button class="carousel-arrow" id="carousel-midia-next" aria-label="Próximo">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Lado direito: Texto -->
+        <div class="midia-text-wrap">
+          <div class="midia-header">
+            <span class="section-eyebrow">IMPRENSA</span>
+            <div class="section-title">Autem na mídia</div>
+            <p class="section-sub">Nossa história e visão sobre o mercado de investimentos nos principais veículos do país.</p>
+          </div>
+          <div class="midia-cta" style="margin-top: 28px;">
+            <button class="btn-primary">Abra sua conta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTÓDIA -->
+  <section class="custodia">
+    <div class="container">
+      <div class="custodia-inner">
+        <div>
+          <div class="custodia-badge">Portabilidade de investimentos</div>
+          <h2 class="custodia-title">Seus ativos têm lugar certo. Traga-os para a Autem.</h2>
+          <p class="custodia-desc">Você não precisa vender para mudar. A Autem cuida de toda a transferência de custódia, simples, sem custo, com o apoio do BTG Pactual.</p>
+          <div class="custodia-steps">
+            <div class="custodia-step">
+              <div class="custodia-step-num">1</div>
+              <div class="custodia-step-text"><strong>Abra sua conta</strong> na Autem via BTG — processo 100% digital</div>
+            </div>
+            <div class="custodia-step">
+              <div class="custodia-step-num">2</div>
+              <div class="custodia-step-text">Acesse o portal BTG: <strong>Transferências → Transferência de Custódia</strong></div>
+            </div>
+            <div class="custodia-step">
+              <div class="custodia-step-num">3</div>
+              <div class="custodia-step-text">Selecione a <strong>instituição de origem</strong> e os ativos que quer transferir</div>
+            </div>
+            <div class="custodia-step">
+              <div class="custodia-step-num">4</div>
+              <div class="custodia-step-text">Assine a STVM (documento de transferência) e envie para a <strong>instituição de origem</strong>. Pronto!</div>
+            </div>
+          </div>
+          <button class="btn-accent">Abrir conta e transferir</button>
+        </div>
+        <div class="custodia-visual">
+          <div>
+            <p class="ativo-section-title">Ativos transferíveis</p>
+            <div class="ativo-list">
+              <div class="ativo-row">
+                <div class="ativo-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+                </div>
+                <div class="ativo-info"><div class="ativo-name">Ações e ETFs</div><div class="ativo-type">Renda Variável listada</div></div>
+              </div>
+              <div class="ativo-row">
+                <div class="ativo-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+                </div>
+                <div class="ativo-info"><div class="ativo-name">Renda Fixa</div><div class="ativo-type">Títulos públicos e privados</div></div>
+              </div>
+              <div class="ativo-row">
+                <div class="ativo-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                </div>
+                <div class="ativo-info"><div class="ativo-name">FIIs e Fundos listados</div><div class="ativo-type">Negociados em bolsa</div></div>
+              </div>
+              <div class="ativo-row">
+                <div class="ativo-icon">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                </div>
+                <div class="ativo-info"><div class="ativo-name">Fundos de Investimento</div><div class="ativo-type">Abertos com portabilidade</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="custodia-note">
+            <strong>Atenção:</strong> Opções Flexíveis, Swap, BTC e fundos de distribuição exclusiva de outras corretoras não são transferíveis. Dúvidas? Fale com a gente.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BLOG PREVIEW -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="blog-section-header">
+        <div>
+          <span class="section-eyebrow">Blog</span>
+          <div class="section-title">Conteúdos para elevar o seu nível de investimentos</div>
+          <p class="section-sub">Informações, notícias e atualizações que traduzem o mercado financeiro em decisões mais simples pro seu dia a dia.</p>
+        </div>
+      </div>
+      <div class="blog-grid carousel-track" id="carousel-blog">
+        <div class="blog-card carousel-item">
+          <div class="blog-thumb"><span class="blog-cat-tag">Renda Fixa</span></div>
+          <div class="blog-body">
+            <div class="blog-title">CRI, CRA ou Debênture: qual faz mais sentido para você?</div>
+            <div class="blog-excerpt">Entenda as diferenças entre os principais títulos de crédito privado e como escolher o certo.</div>
+            <div class="blog-meta">8 min · Publicado recentemente</div>
+          </div>
+        </div>
+        <div class="blog-card carousel-item">
+          <div class="blog-thumb" style="background:var(--c-blue)"><span class="blog-cat-tag">Fundos</span></div>
+          <div class="blog-body">
+            <div class="blog-title">FII ou FIAGRO? Como escolher entre os fundos imobiliários</div>
+            <div class="blog-excerpt">Fundos listados em bolsa: a forma mais acessível de investir em real estate e agronegócio.</div>
+            <div class="blog-meta">6 min · Publicado recentemente</div>
+          </div>
+        </div>
+        <div class="blog-card carousel-item">
+          <div class="blog-thumb" style="background:var(--c-blue)"><span class="blog-cat-tag">Custódia</span></div>
+          <div class="blog-body">
+            <div class="blog-title">Transferência de custódia: o guia completo para migrar seus investimentos</div>
+            <div class="blog-excerpt">O processo é mais simples do que parece. Veja o que pode ser transferido.</div>
+            <div class="blog-meta">10 min · Publicado recentemente</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="carousel-arrow" id="carousel-blog-prev" aria-label="Anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="carousel-dots" id="carousel-blog-dots"></div>
+        <button class="carousel-arrow" id="carousel-blog-next" aria-label="Próximo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="text-center" style="margin-top: 56px;">
+        <button class="btn-outline" onclick="showPage('blog')">Ver todos →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER HOME -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <img class="footer-logo"
+               src="IMGs/autem-logo-branco-scroll.svg"
+               alt="Autem Investimentos"
+               onerror="this.outerHTML='<div style=\'font-size:16px;font-weight:900;color:#fff;margin-bottom:14px;\'>Autem Investimentos</div>'">
+          <p class="footer-brand-desc">Assessoria de investimentos registrada na CVM. Acesso completo à plataforma BTG Pactual com atendimento dedicado.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Navegação</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quem-somos.html">Quem Somos</a></li>
+            <li><a href="time.html">Time</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Institucional</div>
+          <ul class="footer-links">
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Ouvidoria BTG</a></li>
+            <li><a href="#">ANCORD</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Contato</div>
+          <div class="footer-social">
+            <a href="#" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" title="Telegram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg></a>
+            <a href="#" title="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.75"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Autem Ai Agente Autonomo de Investimento LTDA, inscrita sob o CNPJ nº 38.973.687/0001-14 é uma empresa de assessoria de investimento devidamente registrada na Comissão de Valores Mobiliários (CVM), na forma da Resolução CVM 178. Atuando no mercado financeiro como preposto do Banco BTG Pactual S/A, o que pode ser verificado através do site da ANCORD (<a href="https://www.ancord.org.br/certificacao-e-credenciamento/" target="_blank" style="text-decoration:underline;">https://www.ancord.org.br/certificacao-e-credenciamento/</a>) ou através do site do próprio Banco BTG Pactual S/A (<a href="https://www.sejabtg.com/seja-btg" target="_blank" style="text-decoration:underline;">https://www.sejabtg.com/seja-btg</a>). O Banco BTG Pactual S/A é instituição financeira integrante do sistema de distribuição de títulos e valores mobiliários, atuando como intermediário das operações de seus clientes. Na forma da legislação da CVM, o assessor de investimento não pode administrar ou gerir o patrimônio de investidores, pois é um preposto do intermediário e depende da autorização prévia do cliente para realizar operações no mercado financeiro. Na realização de operações com derivativos existe a possibilidade de significativas perdas patrimoniais, inclusive superiores aos valores investidos. A assessoria pode exercer outras atividades relacionadas ao mercado financeiro, de capitais, securitário e de previdência e capitalização, que podem ou não ser em parceria com o BTG Pactual ou demais instituições, e que podem ou não ser realizadas pela mesma pessoa jurídica da assessoria. Especificamente quanto a atividades de gestão, consultoria e análise de valores mobiliários, estas podem vir a ser desempenhadas por empresas do grupo e nunca pela própria assessoria de investimentos, considerando que são atividades conflitantes e que exigem segregação. O investimento em ações é um investimento de risco e rentabilidade passada não é garantia de rentabilidade futura. Para reclamações, favor contatar a Ouvidoria do Banco BTG Pactual S/A no telefone nº 0800-722-0048. Para acessar nossa lista de sócios clique aqui: <a href="https://www.sejabtg.com/escritorios" target="_blank" style="text-decoration:underline;">https://www.sejabtg.com/escritorios.</a></p>
+      </div>
+    </div>
+  </footer>
+</div><!-- /home -->
+
+
+
+<!-- WHATSAPP FLUTUANTE -->
+<button class="whatsapp-float" title="Falar no WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+  </svg>
+</button>
+
+
+<!-- MODAL JÁ TENHO CONTA -->
+<div class="modal-overlay" id="modalJaTenhoConta">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeJaTenhoConta()">×</button>
+    <div class="modal-title">Já sou cliente BTG</div>
+    <p class="modal-sub">Preencha abaixo e um assessor Autem entrará em contato para transferir sua assessoria.</p>
+    <form onsubmit="return false;">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Nome completo</label>
+          <input class="form-input" type="text" placeholder="Seu nome">
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-mail</label>
+          <input class="form-input" type="email" placeholder="seu@email.com">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">WhatsApp</label>
+          <input class="form-input" type="tel" placeholder="(11) 99999-9999">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Patrimônio aproximado</label>
+          <select class="form-select">
+            <option value="">Selecione</option>
+            <option>Até R$ 100 mil</option>
+            <option>R$ 100 mil – R$ 500 mil</option>
+            <option>R$ 500 mil – R$ 1 milhão</option>
+            <option>Acima de R$ 1 milhão</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Assessor atual (opcional)</label>
+        <input class="form-input" type="text" placeholder="Nome do seu assessor atual">
+      </div>
+      <button class="btn-form-submit" type="submit" onclick="closeJaTenhoConta()">Quero migrar para a Autem →</button>
+    </form>
+  </div>
+</div>
+
+<!-- MODAL FALE CONOSCO -->
+<div class="modal-overlay" id="modalFaleConosco">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeFaleConosco()">×</button>
+    <div class="modal-title">Fale conosco</div>
+    <p class="modal-sub">Preencha abaixo e um especialista Autem entrará em contato com você.</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label">Nome</label>
+        <input type="text" class="form-input" placeholder="Seu nome">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Telefone</label>
+        <input type="text" class="form-input" placeholder="(11) 99999-9999">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label">E-mail</label>
+      <input type="email" class="form-input" placeholder="seu@email.com">
+    </div>
+    <div class="form-group">
+      <label class="form-label">Você é</label>
+      <select class="form-select">
+        <option value="">Selecione seu perfil...</option>
+        <option>Pessoa Física — Investidor iniciante</option>
+        <option>Pessoa Física — Já invisto em outros bancos</option>
+        <option>Pessoa Física — Investidor qualificado</option>
+        <option>Pessoa Jurídica — Empresa</option>
+        <option>Assessor — Quero me juntar ao time</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label class="form-label">Patrimônio aproximado</label>
+      <select class="form-select">
+        <option value="">Selecione uma faixa...</option>
+        <option>Até R$ 50 mil</option>
+        <option>R$ 50 mil a R$ 300 mil</option>
+        <option>R$ 300 mil a R$ 1 milhão</option>
+        <option>Acima de R$ 1 milhão</option>
+      </select>
+    </div>
+    <button class="btn-form-submit">Quero ser contatado →</button>
+  </div>
+</div>
+
+<script>
+// ─── NAVEGAÇÃO ───────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  const l = document.getElementById('nav-' + id);
+  if (l) l.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  return false;
+}
+
+// ─── FALE CONOSCO ────────────────────────────
+function openFaleConosco(e) {
+  if (e) e.preventDefault();
+  document.getElementById('modalFaleConosco').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeFaleConosco() {
+  document.getElementById('modalFaleConosco').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function openJaTenhoConta() {
+  document.getElementById('modalJaTenhoConta').classList.add('open');
+}
+function closeJaTenhoConta() {
+  document.getElementById('modalJaTenhoConta').classList.remove('open');
+}
+document.getElementById('modalJaTenhoConta').addEventListener('click', function(e) {
+  if (e.target === this) closeJaTenhoConta();
+});
+
+document.getElementById('modalFaleConosco').addEventListener('click', function(e) {
+  if (e.target === this) closeFaleConosco();
+});
+
+// ─── TABS DE PRODUTO ──────────────────────────
+// Banking tabs
+function switchBankingTab(tab, btn) {
+  document.querySelectorAll('.banking-tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const panels = document.querySelectorAll('.banking-tab-panel');
+  const target = document.getElementById('banking-' + tab);
+
+  panels.forEach(p => {
+    if (p.classList.contains('active') && p !== target) {
+      p.style.opacity = '0';
+      p.style.transform = window.innerWidth <= 768 ? 'translateX(-10px)' : 'translateY(5px)';
+      setTimeout(() => { p.classList.remove('active'); }, 200);
+    }
+  });
+
+  setTimeout(() => {
+    if (target) {
+      target.classList.add('active');
+      target.style.opacity = '0';
+      target.style.transform = window.innerWidth <= 768 ? 'translateX(10px)' : 'translateY(5px)';
+      requestAnimationFrame(() => {
+        target.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+        target.style.opacity = '1';
+        target.style.transform = 'translate(0, 0)';
+        window.dispatchEvent(new Event('resize'));
+      });
+    }
+  }, 200);
+}
+
+function switchPortfolioPane(paneId, btn) {
+  // Sync the active state for pills and menu items
+  document.querySelectorAll('.pill-btn, .menu-item').forEach(b => {
+    b.classList.remove('active');
+  });
+
+  // Find all buttons that trigger this pane and make them active
+  document.querySelectorAll('.pill-btn, .menu-item').forEach(b => {
+    const onclickAttr = b.getAttribute('onclick') || '';
+    if (onclickAttr.includes(`'${paneId}'`) || onclickAttr.includes(`"${paneId}"`)) {
+      b.classList.add('active');
+    }
+  });
+
+  const panes = document.querySelectorAll('.portfolio-pane');
+  const targetPane = document.getElementById(paneId);
+
+  // Crossfade animation
+  panes.forEach(p => {
+    if (p.classList.contains('active') && p !== targetPane) {
+      p.style.opacity = '0';
+      p.style.transform = window.innerWidth <= 768 ? 'translateX(-10px)' : 'translateY(5px)';
+      setTimeout(() => {
+        p.classList.remove('active');
+      }, 200);
+    }
+  });
+
+  setTimeout(() => {
+    if (targetPane) {
+      targetPane.classList.add('active');
+      targetPane.style.opacity = '0';
+      targetPane.style.transform = window.innerWidth <= 768 ? 'translateX(10px)' : 'translateY(5px)';
+      
+      requestAnimationFrame(() => {
+        targetPane.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+        targetPane.style.opacity = '1';
+        targetPane.style.transform = 'translate(0, 0)';
+        window.dispatchEvent(new Event('resize'));
+      });
+    }
+  }, 200);
+}
+
+// ─── BLOG FILTROS ─────────────────────────────
+document.querySelectorAll('.blog-cat-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.blog-cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+</script>
+
+<script>
+// Mobile Menu Logic
+const mobileBtn = document.getElementById('mobile-menu-btn');
+const navDrawer = document.getElementById('nav-drawer');
+const navLinks = navDrawer.querySelectorAll('a, button');
+
+if (mobileBtn && navDrawer) {
+  const topNav = document.querySelector('.nav');
+  mobileBtn.addEventListener('click', () => {
+    mobileBtn.classList.toggle('open');
+    navDrawer.classList.toggle('open');
+    if (topNav) topNav.classList.toggle('menu-open');
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileBtn.classList.remove('open');
+      navDrawer.classList.remove('open');
+      if (topNav) topNav.classList.remove('menu-open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (navDrawer.classList.contains('open') && !navDrawer.contains(e.target) && !mobileBtn.contains(e.target)) {
+      mobileBtn.classList.remove('open');
+      navDrawer.classList.remove('open');
+      if (topNav) topNav.classList.remove('menu-open');
+    }
+  });
+}
+
+// Portfolio Accordion removed
+
+// Reusable Mobile Carousel Component (track + dots + prev/next arrows)
+function initCarousel(trackId, dotsId, prevId, nextId) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+  // querySelectorAll (não track.children) por robustez: todos os 6 carrosséis hoje
+  // têm os itens como filhos diretos, mas isso evita quebrar se algum ganhar um wrapper no futuro
+  const items = Array.from(track.querySelectorAll('.carousel-item'));
+  if (!items.length) return;
+
+  const dotsEl = dotsId ? document.getElementById(dotsId) : null;
+  const prevBtn = prevId ? document.getElementById(prevId) : null;
+  const nextBtn = nextId ? document.getElementById(nextId) : null;
+
+  let dots = [];
+  if (dotsEl) {
+    dotsEl.innerHTML = '';
+    dots = items.map((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot';
+      dot.setAttribute('aria-label', 'Ir para item ' + (i + 1));
+      dot.addEventListener('click', () => scrollToIndex(i));
+      dotsEl.appendChild(dot);
+      return dot;
+    });
+  }
+
+  function scrollToIndex(i) {
+    const item = items[i];
+    if (!item) return;
+    const delta = item.getBoundingClientRect().left - track.getBoundingClientRect().left;
+    const target = track.scrollLeft + delta;
+    if (typeof track.scrollTo === 'function') {
+      track.scrollTo({ left: target, behavior: 'smooth' });
+    } else {
+      track.scrollLeft = target;
+    }
+  }
+
+  function getActiveIndex() {
+    const trackLeft = track.getBoundingClientRect().left;
+    let closest = 0, closestDist = Infinity;
+    items.forEach((item, i) => {
+      const dist = Math.abs(item.getBoundingClientRect().left - trackLeft);
+      if (dist < closestDist) { closestDist = dist; closest = i; }
+    });
+    return closest;
+  }
+
+  function updateUI() {
+    const active = getActiveIndex();
+    dots.forEach((d, i) => d.classList.toggle('active', i === active));
+    if (prevBtn) prevBtn.disabled = active === 0;
+    if (nextBtn) nextBtn.disabled = active === items.length - 1;
+    return active;
+  }
+
+  let scrollTimer;
+  track.addEventListener('scroll', () => {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(updateUI, 100);
+  }, { passive: true });
+
+  if (prevBtn) prevBtn.addEventListener('click', () => scrollToIndex(Math.max(0, updateUI() - 1)));
+  if (nextBtn) nextBtn.addEventListener('click', () => scrollToIndex(Math.min(items.length - 1, updateUI() + 1)));
+
+  window.addEventListener('resize', updateUI);
+  updateUI();
+}
+
+[
+  ['carousel-premios', 'carousel-premios-dots', 'carousel-premios-prev', 'carousel-premios-next'],
+  ['carousel-banking-pf', 'carousel-banking-pf-dots', 'carousel-banking-pf-prev', 'carousel-banking-pf-next'],
+  ['carousel-banking-pj', 'carousel-banking-pj-dots', 'carousel-banking-pj-prev', 'carousel-banking-pj-next'],
+  ['carousel-como-funciona', 'carousel-como-funciona-dots', 'carousel-como-funciona-prev', 'carousel-como-funciona-next'],
+  ['carousel-midia', 'carousel-midia-dots', 'carousel-midia-prev', 'carousel-midia-next'],
+  ['carousel-blog', 'carousel-blog-dots', 'carousel-blog-prev', 'carousel-blog-next'],
+  ['carousel-pilares', 'carousel-pilares-dots', 'carousel-pilares-prev', 'carousel-pilares-next'],
+  ['carousel-rf', 'carousel-rf-dots', 'carousel-rf-prev', 'carousel-rf-next'],
+  ['carousel-rv', 'carousel-rv-dots', 'carousel-rv-prev', 'carousel-rv-next'],
+  ['carousel-fiis', 'carousel-fiis-dots', 'carousel-fiis-prev', 'carousel-fiis-next'],
+  ['carousel-fi', 'carousel-fi-dots', 'carousel-fi-prev', 'carousel-fi-next'],
+  ['carousel-prev', 'carousel-prev-dots', 'carousel-prev-prev', 'carousel-prev-next'],
+  ['carousel-cripto', 'carousel-cripto-dots', 'carousel-cripto-prev', 'carousel-cripto-next'],
+].forEach(args => initCarousel(...args));
+
+// Nav Scroll Logic for Logo
+const NAV_LOGO_DEFAULT = 'IMGs/Autem-logo_branca.png';
+const NAV_LOGO_SCROLLED = 'IMGs/autem-logo-branco-scroll.svg';
+const navEl = document.querySelector('.nav');
+const navLogoImg = navEl ? navEl.querySelector('.nav-logo img') : null;
+let navIsScrolled = false;
+window.addEventListener('scroll', () => {
+  const shouldBeScrolled = window.scrollY > 50;
+  if (shouldBeScrolled === navIsScrolled) return;
+  navIsScrolled = shouldBeScrolled;
+  navEl.classList.toggle('scrolled', navIsScrolled);
+  if (navLogoImg) {
+    navLogoImg.style.opacity = '0';
+    window.setTimeout(() => {
+      navLogoImg.src = navIsScrolled ? NAV_LOGO_SCROLLED : NAV_LOGO_DEFAULT;
+      navLogoImg.style.opacity = '1';
+    }, 150);
+  }
+}, { passive: true });
+
+// Animação dos Números da Hero
+function initNumbersAnimation() {
+  const animElements = document.querySelectorAll('.num-anim');
+  if (!animElements.length) return;
+
+  const animateValue = (el) => {
+    const target = parseFloat(el.getAttribute('data-val')) || 0;
+    const prefix = el.getAttribute('data-prefix') || '';
+    const suffix = el.getAttribute('data-suffix') || '';
+    const format = el.getAttribute('data-format') || '';
+    const duration = 1600;
+    const startTime = performance.now();
+
+    const updateNumber = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentVal = Math.floor(easeProgress * target);
+      
+      let formattedVal = currentVal.toString();
+      if (format === 'dot') {
+        formattedVal = currentVal.toLocaleString('pt-BR');
+      }
+      
+      el.textContent = prefix + formattedVal + suffix;
+      
+      if (progress < 1) {
+        requestAnimationFrame(updateNumber);
+      } else {
+        let finalVal = target.toString();
+        if (format === 'dot') finalVal = target.toLocaleString('pt-BR');
+        el.textContent = prefix + finalVal + suffix;
+      }
+    };
+
+    requestAnimationFrame(updateNumber);
+  };
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateValue(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  animElements.forEach(el => observer.observe(el));
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initNumbersAnimation);
+} else {
+  initNumbersAnimation();
+}
+</script>
+
+</body>
+</html>
