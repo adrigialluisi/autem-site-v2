@@ -771,6 +771,30 @@ img { display: block; max-width: 100%; }
 .qs-pillar-icon { margin-bottom: 14px; color: var(--c-blue); }
 .qs-pillar h4 { font-size: var(--text-base); font-weight: 800; color: var(--text-primary); margin-bottom: 8px; }
 .qs-pillar p { font-size: var(--text-sm); color: var(--text-muted); line-height: 1.68; margin: 0; }
+
+.qs-manifesto { background: #fff; padding: 84px 0; }
+.qs-manifesto-head { margin-bottom: 52px; }
+.qs-manifesto-head .section-title { margin-bottom: 0; }
+
+.qs-manifesto-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; margin-bottom: 52px; }
+.qs-manifesto-col-divider { border-left: 1px solid rgba(58, 79, 214, 0.18); padding-left: 56px; }
+
+.qs-manifesto-kicker { display: block; font-size: 12px; font-weight: 800; letter-spacing: 2px; color: var(--c-green); margin-bottom: 14px; }
+
+.qs-manifesto-lead { font-size: 20px; font-weight: 300; color: var(--text-primary); line-height: 1.4; letter-spacing: -0.2px; margin: 0 0 20px; }
+.qs-manifesto-body { font-size: var(--text-base, 16px); font-weight: 400; color: var(--text-muted); line-height: 1.75; margin: 0; }
+.qs-manifesto-thesis { font-size: 20px; font-weight: 600; color: var(--text-primary); line-height: 1.45; letter-spacing: -0.2px; margin: 0 0 20px; }
+.qs-manifesto-highlight { color: var(--c-blue); }
+
+.qs-manifesto-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.qs-manifesto-chip { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--text-primary); background: rgba(69, 235, 203, 0.28); border-radius: 20px; padding: 6px 14px; }
+
+.qs-manifesto-close { border-top: 1px solid rgba(58, 79, 214, 0.18); padding-top: 44px; }
+.qs-manifesto-quote { font-size: 29px; font-weight: 500; color: var(--text-primary); line-height: 1.32; letter-spacing: -0.5px; margin: 14px auto 24px; max-width: 680px; }
+.qs-manifesto-final { font-size: 17px; font-weight: 500; color: var(--text-primary); line-height: 1.5; margin: 0 0 28px; }
+.qs-manifesto-final strong { color: var(--c-blue); font-weight: 700; }
+.qs-manifesto-sign { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--text-muted); margin: 0; }
+
 .qs-btg { padding: 84px 0; background: var(--c-blue); }
 .qs-btg-inner { display: flex; align-items: center; gap: 64px; flex-wrap: wrap; }
 .qs-btg-text { flex: 1; min-width: 280px; }
@@ -815,15 +839,20 @@ img { display: block; max-width: 100%; }
 }
 .time-card:hover { box-shadow: 0 20px 56px rgba(58, 79, 214, 0.12); transform: translateY(-4px); }
 .time-avatar {
-  height: 208px;
+  height: 340px;
   background: var(--c-blue);
   display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.time-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 15%;
 }
 .time-avatar-initials {
-  width: 76px; height: 76px; border-radius: 50%;
+  width: 90px; height: 90px; border-radius: 50%;
   background: rgba(69,235,203,0.14); border: 2px solid rgba(69,235,203,0.35);
   display: flex; align-items: center; justify-content: center;
-  font-size: 26px; font-weight: 900; color: var(--c-green);
+  font-size: 30px; font-weight: 900; color: var(--c-green);
 }
 .time-card-body { padding: 24px; }
 .time-card-name { font-size: var(--text-md); font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
@@ -1650,6 +1679,8 @@ a:focus-visible, button:focus-visible, .product-tab:focus-visible, .banking-tab-
   .steps { grid-template-columns: 1fr; gap: 40px; }
   .step:not(:last-child)::after { display: none; }
   .custodia-inner, .qs-grid { grid-template-columns: 1fr; gap: 40px; }
+  .qs-manifesto-cols { grid-template-columns: 1fr; gap: 40px; }
+  .qs-manifesto-col-divider { border-left: none; padding-left: 0; border-top: 1px solid rgba(58, 79, 214, 0.18); padding-top: 40px; }
   .blog-grid, .time-grid, .blog-all-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .numeros-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -1707,6 +1738,10 @@ a:focus-visible, button:focus-visible, .product-tab:focus-visible, .banking-tab-
   .qs-btg-glass { width: 100%; box-sizing: border-box; padding: 24px; }
   .qs-cta-buttons { flex-direction: column; align-items: stretch; gap: 12px !important; }
   .qs-cta-buttons .btn-primary, .qs-cta-buttons .btn-outline { width: 100% !important; margin-top: 0 !important; }
+  .qs-manifesto { padding: clamp(40px, 8vw, 64px) 0; }
+  .qs-manifesto-lead { font-size: 18px; }
+  .qs-manifesto-thesis { font-size: 18px; }
+  .qs-manifesto-quote { font-size: 24px; }
 }
 
 /* 480px (Mobile Portrait) */
